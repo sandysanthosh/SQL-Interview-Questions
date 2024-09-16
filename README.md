@@ -249,3 +249,165 @@ Certainly! Here are some more complex SQL interview questions that delve deeper 
 
 These questions cover a range of SQL concepts and complexities commonly encountered in interviews, from advanced querying techniques to optimization and transaction management.
 
+
+Here’s a quick reference for basic and commonly used SQL commands:
+
+1. Basic SQL Queries
+
+Select Data:
+
+SELECT column1, column2 FROM table_name;
+
+Retrieve all columns:
+
+
+SELECT * FROM table_name;
+
+Retrieve unique values:
+
+
+SELECT DISTINCT column_name FROM table_name;
+
+Filtering Data:
+
+Using WHERE clause:
+
+
+SELECT column1, column2 FROM table_name WHERE condition;
+
+Logical operators:
+
+AND: Combines two conditions.
+
+OR: At least one condition must be true.
+
+NOT: Negates a condition.
+
+
+
+SELECT * FROM employees WHERE salary > 50000 AND department = 'HR';
+
+Sorting Data:
+
+SELECT column1, column2 FROM table_name ORDER BY column_name ASC|DESC;
+
+Limiting Records:
+
+SELECT * FROM table_name LIMIT 10;
+
+2. Joins
+
+Inner Join:
+
+SELECT columns FROM table1
+JOIN table2 ON table1.column = table2.column;
+
+Left Join:
+
+SELECT columns FROM table1
+LEFT JOIN table2 ON table1.column = table2.column;
+
+Right Join:
+
+SELECT columns FROM table1
+RIGHT JOIN table2 ON table1.column = table2.column;
+
+Full Join:
+
+SELECT columns FROM table1
+FULL OUTER JOIN table2 ON table1.column = table2.column;
+
+3. Aggregation Functions
+
+COUNT(), SUM(), AVG(), MIN(), MAX()
+
+
+SELECT COUNT(*), SUM(salary), AVG(salary) FROM employees;
+
+Group By:
+
+SELECT department, COUNT(*) FROM employees GROUP BY department;
+
+Having (to filter groups):
+
+SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 5;
+
+4. Inserting Data
+
+INSERT INTO table_name (column1, column2) VALUES (value1, value2);
+
+Insert multiple rows:
+
+
+INSERT INTO table_name (column1, column2) VALUES (value1, value2), (value3, value4);
+
+5. Updating Data
+
+UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;
+
+6. Deleting Data
+
+DELETE FROM table_name WHERE condition;
+
+Delete all rows:
+
+
+DELETE FROM table_name;
+
+7. Table and Schema Management
+
+Create Table:
+
+
+CREATE TABLE table_name (
+  column1 datatype,
+  column2 datatype,
+  ...
+);
+
+Alter Table (Add column):
+
+
+ALTER TABLE table_name ADD column_name datatype;
+
+Drop Table:
+
+
+DROP TABLE table_name;
+
+8. Subqueries
+
+Inside a WHERE clause:
+
+
+SELECT * FROM employees WHERE salary > (SELECT AVG(salary) FROM employees);
+
+Inside the FROM clause:
+
+
+SELECT avg_salary FROM (SELECT AVG(salary) AS avg_salary FROM employees) AS subquery;
+
+9. Case Statement
+
+SELECT column_name,
+CASE
+  WHEN condition1 THEN result1
+  WHEN condition2 THEN result2
+  ELSE result3
+END
+FROM table_name;
+
+10. Data Types (Common)
+
+INT: Integer values.
+
+VARCHAR(n): Variable-length string.
+
+DATE: Date in format YYYY-MM-DD.
+
+FLOAT: Floating-point number.
+
+
+This reference covers essential SQL commands for querying and managing data.
+
+
